@@ -69,11 +69,11 @@
       </form>
       <div>
         <div class="flex items-center justify-center mt-4">
-          <span class="text-sm text-gray-500 mt-2">Or continue with</span><br>
+          <span class="text-sm text-gray-500 mt-2">Or continue with</span><br />
           <GoogleSignInButton
-    @success="handleLoginSuccess"
-    @error="handleLoginError"
-  ></GoogleSignInButton>
+            @success="handleLoginSuccess"
+            @error="handleLoginError"
+          ></GoogleSignInButton>
         </div>
       </div>
     </div>
@@ -90,12 +90,12 @@ const handleLoginSuccess = async (response: CredentialResponse) => {
   const { credential } = response;
   let user;
   if (credential) {
-    user = await $fetch("/api/google-login",{
-        method: "POST",
-        body: {
-            token: credential
-        }
-    })
+    user = await $fetch("/api/google-login", {
+      method: "POST",
+      body: {
+        token: credential,
+      },
+    });
   }
   console.log("user", user);
   console.log("Access Token", credential);

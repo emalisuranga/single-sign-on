@@ -1,10 +1,10 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "singlesignon4186258e_identitypool_4186258e",
+    "identityPoolName": "singlesignon933f18a5_identitypool_933f18a5",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "single4186258e",
-    "userPoolName": "singlesignon4186258e_userpool_4186258e",
+    "resourceNameTruncated": "single933f18a5",
+    "userPoolName": "singlesignon933f18a5_userpool_933f18a5",
     "autoVerifiedAttributes": [
       "email"
     ],
@@ -31,19 +31,19 @@
     "userpoolClientReadAttributes": [
       "email"
     ],
-    "userpoolClientLambdaRole": "single4186258e_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "single933f18a5_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "4186258e",
-    "resourceName": "singlesignon4186258e",
+    "sharedId": "933f18a5",
+    "resourceName": "singlesignon933f18a5",
     "authSelections": "identityPoolAndUserPool",
     "useDefault": "defaultSocial",
     "hostedUI": true,
-    "hostedUIDomainName": "singlesignon4186258e-4186258e",
+    "hostedUIDomainName": "singlesignon933f18a5-933f18a5",
     "authProvidersUserPool": [
       "Google"
     ],
     "hostedUIProviderMeta": "[{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"sub\"}}]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/\",\"http://localhost:3000/dashboard/\"],\"LogoutURLs\":[\"https://main.duhc022un51h.amplifyapp.com/\"]}",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/\"],\"LogoutURLs\":[\"http://localhost:3000/dashboard/\"]}",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
