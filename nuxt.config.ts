@@ -1,11 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { resolve } from "path"
+
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  alias: {
-    "@": resolve(__dirname,"/"),
-  },
   css: ["~/assets/main.css"],
   postcss: {
     plugins: {
@@ -13,4 +10,10 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  modules: [
+    'nuxt-vue3-google-signin'
+  ],
+  googleSignIn: {
+    clientId: '581624144888-iesgqb1efn3ieal4bkf2rp2q4uicrqqd.apps.googleusercontent.com',
+  }
 })

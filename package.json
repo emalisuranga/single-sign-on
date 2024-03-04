@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "nuxt": "^3.10.3",
+    "nuxt-vue3-google-signin": "^0.0.10",
     "vue": "^3.4.19",
-    "vue-router": "^4.3.0",
-    "vue3-google-login": "^2.0.25"
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.18",

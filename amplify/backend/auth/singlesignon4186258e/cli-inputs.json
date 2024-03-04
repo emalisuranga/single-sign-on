@@ -1,0 +1,52 @@
+{
+  "version": "1",
+  "cognitoConfig": {
+    "identityPoolName": "singlesignon4186258e_identitypool_4186258e",
+    "allowUnauthenticatedIdentities": false,
+    "resourceNameTruncated": "single4186258e",
+    "userPoolName": "singlesignon4186258e_userpool_4186258e",
+    "autoVerifiedAttributes": [
+      "email"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+      "SMS Text Message"
+    ],
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [],
+    "requiredAttributes": [
+      "email"
+    ],
+    "aliasAttributes": [],
+    "userpoolClientGenerateSecret": false,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientWriteAttributes": [
+      "email"
+    ],
+    "userpoolClientReadAttributes": [
+      "email"
+    ],
+    "userpoolClientLambdaRole": "single4186258e_userpoolclient_lambda_role",
+    "userpoolClientSetAttributes": false,
+    "sharedId": "4186258e",
+    "resourceName": "singlesignon4186258e",
+    "authSelections": "identityPoolAndUserPool",
+    "useDefault": "defaultSocial",
+    "hostedUI": true,
+    "hostedUIDomainName": "singlesignon4186258e-4186258e",
+    "authProvidersUserPool": [
+      "Google"
+    ],
+    "hostedUIProviderMeta": "[{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"sub\"}}]",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/\",\"http://localhost:3000/dashboard/\"],\"LogoutURLs\":[\"https://main.duhc022un51h.amplifyapp.com/\"]}",
+    "userPoolGroupList": [],
+    "serviceName": "Cognito",
+    "usernameCaseSensitive": false,
+    "useEnabledMfas": true
+  }
+}
