@@ -4,7 +4,7 @@ import { signOut } from "aws-amplify/auth";
 const handleSignOut = async () => {
   try {
     // console.log("error signing out: ");
-    await signOut();
+    await signOut({ global: true });
     console.log("Sing out");
   } catch (error) {
     console.log("error signing out: ", error);
