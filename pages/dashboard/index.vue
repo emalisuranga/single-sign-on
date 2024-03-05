@@ -5,6 +5,7 @@ const handleSignOut = async () => {
   try {
     // console.log("error signing out: ");
     await signOut();
+    console.log("Sing out");
   } catch (error) {
     console.log("error signing out: ", error);
   }
