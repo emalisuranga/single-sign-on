@@ -1,15 +1,30 @@
 <script setup>
 import { signOut } from "aws-amplify/auth";
+import { getCurrentUser } from "aws-amplify/auth";
+import { Hub } from "aws-amplify/utils";
 
 const handleSignOut = async () => {
   try {
-    // console.log("error signing out: ");
     await signOut({ global: true });
-    console.log("Sing out");
   } catch (error) {
     console.log("error signing out: ", error);
   }
 };
+
+onMounted(async () => {
+  try {
+    // Check if the user is authenticated
+    const currentUser = await getCurrentUser()
+    console.log(currentUser);
+    // if (currentUser) {
+    //   localStorage.setItem('accessToken', currentUser.signInUserSession.accessToken.jwtToken)
+    // } else {
+    //   router.push('/login')
+    // }
+  } catch (error) {
+    console.error('Error getting current user:', error)
+  }
+})
 
 definePageMeta({
     middleware: 'auth' // this should match the name of the file inside the middleware directory 
