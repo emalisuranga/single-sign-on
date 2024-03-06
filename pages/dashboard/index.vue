@@ -1,26 +1,16 @@
 <script setup>
-import { signOut } from "aws-amplify/auth";
 import { getCurrentUser } from "aws-amplify/auth";
-import { Hub } from "aws-amplify/utils";
-
-const handleSignOut = async () => {
-  try {
-    await signOut({ global: true });
-  } catch (error) {
-    console.log("error signing out: ", error);
-  }
-};
 
 onMounted(async () => {
   try {
     // Check if the user is authenticated
     const currentUser = await getCurrentUser()
     console.log(currentUser);
-    // if (currentUser) {
-    //   localStorage.setItem('accessToken', currentUser.signInUserSession.accessToken.jwtToken)
-    // } else {
-    //   router.push('/login')
-    // }
+    if (currentUser) {
+      localStorage.setItem('accessToken', currentUser.userId)
+    } else {
+      router.push('/login')
+    }
   } catch (error) {
     console.error('Error getting current user:', error)
   }
@@ -56,50 +46,8 @@ definePageMeta({
 
 <template>
   <v-layout>
-    <v-navigation-drawer expand-on-hover rail>
-      <v-list>
-        <v-list-item
-          prepend-avatar="https://randomuser.me/api/portraits/women/85.jpg"
-          subtitle="sandra_a88@gmailcom"
-          title="Sandra Adams"
-        ></v-list-item>
-      </v-list>
-
-      <v-divider></v-divider>
-
-      <v-list density="compact" nav>
-        <v-list-item
-          prepend-icon="mdi-folder"
-          title="My Files"
-          value="myfiles"
-        ></v-list-item>
-        <v-list-item
-          prepend-icon="mdi-account-multiple"
-          title="Shared with me"
-          value="shared"
-        ></v-list-item>
-        <v-list-item
-          prepend-icon="mdi-star"
-          title="Starred"
-          value="starred"
-        ></v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-app-bar :elevation="2">
-      <template v-slot:prepend>
-        <v-app-bar-nav-icon></v-app-bar-nav-icon>
-      </template>
-
-      <v-app-bar-title>Application Bar</v-app-bar-title>
-
-      <template v-slot:append>
-        <v-btn icon="mdi-logout" @click="handleSignOut"></v-btn>
-
-        <v-btn icon="mdi-magnify"></v-btn>
-
-        <v-btn icon="mdi-dots-vertical"></v-btn>
-      </template>
-    </v-app-bar>
+    <side-nav />
+    <application-bar />
 
     <v-main style="height: 250px">
     </v-main>
